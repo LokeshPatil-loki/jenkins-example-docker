@@ -5,7 +5,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh(script: 'node --version', returnStatus: true)
+          echo "Running Test stage"
+          sh 'node --version'
+          echo "Node.js version checked"
       }
     }
   }
